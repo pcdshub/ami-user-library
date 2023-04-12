@@ -1,0 +1,11 @@
+[run]
+source =
+    ami_user_library
+[report]
+omit =
+    #versioning
+    .*version.*
+    *_version.py
+    #tests
+    *test*
+    ami_user_library/tests/*
