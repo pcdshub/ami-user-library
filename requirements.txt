@@ -1,1 +1,5 @@
 # List requirements here.
+ami
+typing
+amitypes
+numpy
