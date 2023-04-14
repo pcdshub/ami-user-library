@@ -13,9 +13,16 @@ def remove_bkg(img, n1, n2):
 
 def stats_from_moments(x, y=None):
     """
-    Args:
-        x: values
-        y: weights
+    Weigted mean, sigma, and skew.
+    Use case is typically for quick stats on a gaussian-like
+    distribution.
+
+    Parameters
+    ----------
+    x: np.ndarray
+        values
+    y: np.ndarray
+        weights
     """
     if y is None:
         y = np.ones_like(x)
@@ -27,12 +34,16 @@ def stats_from_moments(x, y=None):
     return mean, sigma, skew
 
 
-def moment_img(img, m, n):
+def moment_2d(img, m, n):
     """
     Calculate the m, n moment of an image.
 
-    img : input array
-    m, n: moment order on i,j respectively
+    Parameters
+    ----------
+    img : np.ndarray
+        Input array image
+    m, n: int
+        moment order on i,j respectively
     """
     si, sj = img.shape
     ii = np.arange(si)
@@ -41,13 +52,18 @@ def moment_img(img, m, n):
     return M_mn
 
 
-def central_moment_img(img, centroid, m, n):
+def central_moment_2d(img, centroid, m, n):
     """
     Calculate the m, n central moment of an image.
 
-    img : input array
-    centroid : centroid coordinate (i,j)
-    m, n: moment order on i,j respectively
+    Parameters
+    ----------
+    img : np.ndarray
+        Input array image
+    centroid :
+        Centroid coordinate (i,j)
+    m, n: int
+        Moment order on i,j respectively
     """
     ci, cj = centroid
     si, sj = img.shape
@@ -72,14 +88,14 @@ def covariance_from_moments(centroid, m_00, mc_20, mc_11, mc_02):
 
 
 def image_stats(img):
-    m00 = moment_img(img, 0, 0)
-    m10 = moment_img(img, 1, 0)
-    m01 = moment_img(img, 0, 1)
+    m00 = moment_2d(img, 0, 0)
+    m10 = moment_2d(img, 1, 0)
+    m01 = moment_2d(img, 0, 1)
     centroid = centroid_from_moments(m00, m10, m01)
 
-    mc_20 = central_moment_img(img, centroid, 2, 0)
-    mc_11 = central_moment_img(img, centroid, 1, 1)
-    mc_02 = central_moment_img(img, centroid, 0, 2)
+    mc_20 = central_moment_2d(img, centroid, 2, 0)
+    mc_11 = central_moment_2d(img, centroid, 1, 1)
+    mc_02 = central_moment_2d(img, centroid, 0, 2)
     cov = covariance_from_moments(centroid, m00, mc_20, mc_11, mc_02)
 
     return centroid, cov
@@ -133,7 +149,6 @@ class EventProcessor():
 
 
 class centroid(CtrlNode):
-
     """
     Calculate the centroid of a given array.
     Two methods are available:
