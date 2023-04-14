@@ -9,16 +9,17 @@ on:
 
 jobs:
   standard:
-    uses: pcdshub/pcds-ci-helpers/.github/workflows/python-standard.yml@master
-    with:
+    uses: pcdshub/pcds-ci-helpers/.github/workflows/pre-commit.yml@master
+#    uses: pcdshub/pcds-ci-helpers/.github/workflows/python-standard.yml@master
+#    with:
       # The workflow needs to know the package name.  This can be determined
       # automatically if the repository name is the same as the import name.
-      package-name: "ami_user_library"
+#      package-name: "ami_user_library"
       # Extras that will be installed for both conda/pip:
-      testing-extras: ""
+#      testing-extras: ""
       # Extras to be installed only for conda-based testing:
-      conda-testing-extras: ""
+#      conda-testing-extras: ""
       # Extras to be installed only for pip-based testing:
-      pip-testing-extras: ""
+#      pip-testing-extras: ""
       # Use setuptools-scm in the conda-build workflow
-      use-setuptools-scm: true
+#      use-setuptools-scm: true
