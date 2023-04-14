@@ -7,6 +7,17 @@ from ami.flowchart.library.common import CtrlNode
 
 # ##### utility functions #####
 def remove_bkg(img, n1, n2):
+    """
+    Subtract a sized n1 top left and n2 bottom right square average intensity
+    from the image.
+
+    Parameters
+    ----------
+    img: np.ndarray
+        Input image
+    n1, n2: int
+        Sizes of the top left and bottom right squares
+    """
     img -= (img[:n1, :n1].mean() + img[-n2:, -n2:].mean())/2
     return img
 
@@ -114,7 +125,8 @@ class EventProcessor():
 
     def __init__(self):
         self.use_proj = False
-        pass
+        self.bkg_idx = (10, 10)  # index for background removal
+        return
 
     def begin_run(self):
         pass
@@ -130,7 +142,8 @@ class EventProcessor():
 
     def on_event(self, img, *args, **kwargs):
         use_proj = bool(self.use_proj)
-        img = remove_bkg(img, 10, 10)
+        if self.bkg_idx != (0, 0):
+            img = remove_bkg(img, self.bkg_idx[0], self.bkg_idx[1])
 
         if use_proj:
             i_idx = np.arange(img.shape[0])
@@ -163,7 +176,11 @@ class centroid(CtrlNode):
     """
 
     nodeName = "centroid"
-    uiTemplate = [('use_projection', 'check', {'checked': False})]
+    uiTemplate = [
+        ('use_projection', 'check', {'checked': False}),
+        ('bkg_n1', 'intSpin', {'value': 10, 'min': 0}),
+        ('bkg_n2', 'intSpin', {'value': 10, 'min': 0}),
+    ]
 
     def __init__(self, name):
         super().__init__(

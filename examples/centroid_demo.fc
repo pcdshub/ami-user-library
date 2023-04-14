@@ -1192,7 +1192,7 @@
   },
   "library": {
     "paths": [
-      "/cds/home/e/espov/lcls_analysis_tools/ami2_workflows/library/centroid.py"
+      "../ami_user_library/common/centroid.py"
     ]
   }
 }
