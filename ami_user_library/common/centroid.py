@@ -161,7 +161,7 @@ class EventProcessor():
         return com_i, com_j, fwhm_i, fwhm_j
 
 
-class centroid(CtrlNode):
+class Centroid(CtrlNode):
     """
     Calculate the centroid of a given array.
     Two methods are available:
@@ -175,7 +175,7 @@ class centroid(CtrlNode):
 
     """
 
-    nodeName = "centroid"
+    nodeName = "Centroid"
     uiTemplate = [
         ('use_projection', 'check', {'checked': False}),
         ('bkg_n1', 'intSpin', {'value': 10, 'min': 0}),

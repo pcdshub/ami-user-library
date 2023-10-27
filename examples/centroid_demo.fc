@@ -685,80 +685,6 @@
       }
     },
     {
-      "class": "SourceNode",
-      "name": "timestamp",
-      "state": {
-        "pos": [
-          400.0,
-          0.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "Out": {
-            "io": "out",
-            "removable": false,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          }
-        }
-      }
-    },
-    {
-      "class": "centroid",
-      "name": "centroid.0",
-      "state": {
-        "pos": [
-          400.0,
-          300.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "img": {
-            "io": "in",
-            "removable": true,
-            "ttype": "amitypes.array.Array2d",
-            "optional": false,
-            "group": null
-          },
-          "com_i": {
-            "io": "out",
-            "removable": true,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          },
-          "com_j": {
-            "io": "out",
-            "removable": true,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          },
-          "fwhm_i": {
-            "io": "out",
-            "removable": true,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          },
-          "fwhm_j": {
-            "io": "out",
-            "removable": true,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          }
-        },
-        "ctrl": {
-          "use_projection": true
-        },
-        "geometry": "01d9d0cb0003000000000622000000390000094100000358000006220000003900000941000003580000000000000000100000000622000000390000094100000358"
-      }
-    },
-    {
       "class": "TimePlot",
       "name": "TimePlot.0",
       "state": {
@@ -767,7 +693,7 @@
           100.0
         ],
         "enabled": true,
-        "viewed": true,
+        "viewed": false,
         "terminals": {
           "X": {
             "io": "in",
@@ -914,7 +840,7 @@
           200.0
         ],
         "enabled": true,
-        "viewed": true,
+        "viewed": false,
         "terminals": {
           "X": {
             "io": "in",
@@ -1061,7 +987,7 @@
           400.0
         ],
         "enabled": true,
-        "viewed": true,
+        "viewed": false,
         "terminals": {
           "In": {
             "io": "in",
@@ -1115,6 +1041,82 @@
         },
         "geometry": "01d9d0cb00030000000007a20000013700000ac100000456000007a20000013700000ac10000045600000000000000001000000007a20000013700000ac100000456"
       }
+    },
+    {
+      "class": "Centroid",
+      "name": "Centroid.0",
+      "state": {
+        "pos": [
+          400.0,
+          300.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "img": {
+            "io": "in",
+            "removable": true,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          },
+          "com_i": {
+            "io": "out",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "com_j": {
+            "io": "out",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "fwhm_i": {
+            "io": "out",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "fwhm_j": {
+            "io": "out",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "use_projection": false,
+          "bkg_n1": 10,
+          "bkg_n2": 10
+        },
+        "geometry": "01d9d0cb000300000000070c0000012300000a2b000004420000070c0000012300000a2b00000442000000000000000010000000070c0000012300000a2b00000442"
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "timestamp",
+      "state": {
+        "pos": [
+          400.0,
+          0.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        }
+      }
     }
   ],
   "connects": [
@@ -1139,44 +1141,44 @@
     [
       "Roi2D.0",
       "Out",
-      "centroid.0",
+      "Centroid.0",
       "img"
-    ],
-    [
-      "timestamp",
-      "Out",
-      "TimePlot.0",
-      "X"
-    ],
-    [
-      "timestamp",
-      "Out",
-      "TimePlot.1",
-      "X"
-    ],
-    [
-      "centroid.0",
-      "com_i",
-      "TimePlot.0",
-      "Y"
-    ],
-    [
-      "centroid.0",
-      "com_j",
-      "TimePlot.1",
-      "Y"
-    ],
-    [
-      "centroid.0",
-      "com_j",
-      "Filter.0",
-      "In"
     ],
     [
       "Filter.0",
       "Out",
       "ObjectViewer.0",
       "In"
+    ],
+    [
+      "Centroid.0",
+      "com_j",
+      "Filter.0",
+      "In"
+    ],
+    [
+      "Centroid.0",
+      "com_j",
+      "TimePlot.1",
+      "Y"
+    ],
+    [
+      "Centroid.0",
+      "com_i",
+      "TimePlot.0",
+      "Y"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "TimePlot.0",
+      "X"
+    ],
+    [
+      "timestamp",
+      "Out",
+      "TimePlot.1",
+      "X"
     ]
   ],
   "viewbox": {
