@@ -37,6 +37,7 @@
               "Log Scale": false
             },
             "Display": {
+              "Lock Aspect Ratio": true,
               "Flip": false,
               "Rotate Counter Clockwise": "0"
             }
@@ -44,27 +45,27 @@
           "viewbox": {
             "targetRange": [
               [
-                -0.5,
-                0.5
+                -32.414309517907,
+                832.414309517907
               ],
               [
-                -0.5,
-                0.5
+                -22.376224218846044,
+                622.376224218846
               ]
             ],
             "viewRange": [
               [
-                -0.5,
-                0.5
+                -32.414309517907,
+                832.414309517907
               ],
               [
-                -0.5,
-                0.5
+                -22.376224218846044,
+                622.376224218846
               ]
             ],
             "yInverted": false,
             "xInverted": false,
-            "aspectLocked": false,
+            "aspectLocked": 1,
             "autoRange": [
               true,
               true
@@ -157,13 +158,13 @@
               "ticksVisible": true
             },
             "levels": [
-              0,
-              1.0
+              -1.3199999332427979,
+              41.0
             ],
             "mode": "mono"
           }
         },
-        "geometry": "01d9d0cb0003000000000c860000008c00000fa5000003ab00000c860000008c00000fa5000003ab0000000000000000100000000c860000008c00000fa5000003ab"
+        "geometry": "01d9d0cb000300000000001e000001920000033d000004b10000001e000001920000033d000004b1000000000000000010000000001e000001920000033d000004b1"
       }
     },
     {
@@ -203,6 +204,7 @@
               "Log Scale": false
             },
             "Display": {
+              "Lock Aspect Ratio": true,
               "Flip": false,
               "Rotate Counter Clockwise": "0"
             }
@@ -366,8 +368,8 @@
           }
         },
         "ctrl": {
-          "origin x": 175,
-          "origin y": 325,
+          "origin x": 336,
+          "origin y": 172,
           "extent x": 100,
           "extent y": 125
         },
@@ -389,6 +391,7 @@
               "Log Scale": false
             },
             "Display": {
+              "Lock Aspect Ratio": true,
               "Flip": false,
               "Rotate Counter Clockwise": "0"
             }
@@ -416,7 +419,7 @@
             ],
             "yInverted": false,
             "xInverted": false,
-            "aspectLocked": false,
+            "aspectLocked": 1,
             "autoRange": [
               false,
               false
@@ -509,8 +512,8 @@
               "ticksVisible": true
             },
             "levels": [
-              0,
-              41.0
+              -0.8899999856948853,
+              35.0
             ],
             "mode": "mono"
           }
@@ -527,7 +530,7 @@
           100.0
         ],
         "enabled": true,
-        "viewed": false,
+        "viewed": true,
         "terminals": {
           "In": {
             "io": "in",
@@ -555,6 +558,7 @@
               "Log Scale": false
             },
             "Display": {
+              "Lock Aspect Ratio": true,
               "Flip": false,
               "Rotate Counter Clockwise": "0"
             }
@@ -562,27 +566,27 @@
           "viewbox": {
             "targetRange": [
               [
-                -3.763383070820147,
-                103.76338307082014
+                -6.778453815809604,
+                131.7784538158096
               ],
               [
-                -4.921870193488486,
-                129.92187019348847
+                -6.311944030978031,
+                106.31194403097803
               ]
             ],
             "viewRange": [
               [
-                -3.763383070820147,
-                103.76338307082014
+                -6.778453815809604,
+                131.7784538158096
               ],
               [
-                -4.921870193488486,
-                129.92187019348847
+                -6.311944030978031,
+                106.31194403097803
               ]
             ],
             "yInverted": false,
             "xInverted": false,
-            "aspectLocked": false,
+            "aspectLocked": 1,
             "autoRange": [
               1.0,
               1.0
@@ -675,371 +679,13 @@
               "ticksVisible": true
             },
             "levels": [
-              -0.6131338227575718,
-              515.8738837957612
+              14.32344359333381,
+              69.02127609769332
             ],
             "mode": "mono"
           }
         },
         "geometry": "01d9d0cb000300000000020d000001f000000582000004c50000020d000001f000000582000004c5000000000000000010000000020d000001f000000582000004c5"
-      }
-    },
-    {
-      "class": "TimePlot",
-      "name": "TimePlot.0",
-      "state": {
-        "pos": [
-          600.0,
-          100.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "X": {
-            "io": "in",
-            "removable": false,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          },
-          "Y": {
-            "io": "in",
-            "removable": false,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          }
-        },
-        "ctrl": {
-          "Num Points": 1000
-        },
-        "widget": {
-          "ctrl": {
-            "Title": "",
-            "Show Grid": true,
-            "X Axis": {
-              "Label": "",
-              "Log Scale": false
-            },
-            "Y Axis": {
-              "Label": "",
-              "Log Scale": false
-            },
-            "trace.0": "centroid.0.com_i vs timestamp"
-          },
-          "legend": {
-            "trace.0": [
-              "centroid.0.com_i vs timestamp",
-              "centroid.0.com_i vs timestamp",
-              {
-                "Point": {
-                  "symbol": "None",
-                  "Brush": [
-                    0,
-                    0,
-                    255,
-                    255
-                  ],
-                  "Size": 14
-                },
-                "Line": {
-                  "color": [
-                    255,
-                    0,
-                    0,
-                    255
-                  ],
-                  "width": 1,
-                  "style": "Solid"
-                }
-              }
-            ]
-          },
-          "viewbox": {
-            "targetRange": [
-              [
-                1670883083.5823648,
-                1670883084.0270598
-              ],
-              [
-                42.50033908678382,
-                60.64739049309404
-              ]
-            ],
-            "viewRange": [
-              [
-                1670883083.5823648,
-                1670883084.0270598
-              ],
-              [
-                42.50033908678382,
-                60.64739049309404
-              ]
-            ],
-            "yInverted": false,
-            "xInverted": false,
-            "aspectLocked": false,
-            "autoRange": [
-              true,
-              true
-            ],
-            "autoPan": [
-              false,
-              false
-            ],
-            "autoVisibleOnly": [
-              false,
-              false
-            ],
-            "linkedViews": [
-              null,
-              null
-            ],
-            "defaultPadding": 0.02,
-            "mouseEnabled": [
-              true,
-              true
-            ],
-            "mouseMode": 3,
-            "enableMenu": false,
-            "wheelScaleFactor": -0.125,
-            "background": null,
-            "logMode": [
-              false,
-              false
-            ],
-            "limits": {
-              "xLimits": [
-                -62135596800.0,
-                253370764800.0
-              ],
-              "yLimits": [
-                -1e+307,
-                1e+307
-              ],
-              "xRange": [
-                null,
-                null
-              ],
-              "yRange": [
-                null,
-                null
-              ]
-            }
-          }
-        },
-        "geometry": "01d9d0cb0003000000000b7c000000f500000e9b0000041400000b7c000000f500000e9b000004140000000000000000100000000b7c000000f500000e9b00000414"
-      }
-    },
-    {
-      "class": "TimePlot",
-      "name": "TimePlot.1",
-      "state": {
-        "pos": [
-          600.0,
-          200.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "X": {
-            "io": "in",
-            "removable": false,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          },
-          "Y": {
-            "io": "in",
-            "removable": false,
-            "ttype": "float",
-            "optional": false,
-            "group": null
-          }
-        },
-        "ctrl": {
-          "Num Points": 1000
-        },
-        "widget": {
-          "ctrl": {
-            "Title": "",
-            "Show Grid": true,
-            "X Axis": {
-              "Label": "",
-              "Log Scale": false
-            },
-            "Y Axis": {
-              "Label": "",
-              "Log Scale": false
-            },
-            "trace.0": "centroid.0.com_j vs timestamp"
-          },
-          "legend": {
-            "trace.0": [
-              "centroid.0.com_j vs timestamp",
-              "centroid.0.com_j vs timestamp",
-              {
-                "Point": {
-                  "symbol": "None",
-                  "Brush": [
-                    0,
-                    0,
-                    255,
-                    255
-                  ],
-                  "Size": 14
-                },
-                "Line": {
-                  "color": [
-                    255,
-                    0,
-                    0,
-                    255
-                  ],
-                  "width": 1,
-                  "style": "Solid"
-                }
-              }
-            ]
-          },
-          "viewbox": {
-            "targetRange": [
-              [
-                1670883083.5823648,
-                1670883084.0270598
-              ],
-              [
-                53.87407366129115,
-                79.00066936203157
-              ]
-            ],
-            "viewRange": [
-              [
-                1670883083.5823648,
-                1670883084.0270598
-              ],
-              [
-                53.87407366129115,
-                79.00066936203157
-              ]
-            ],
-            "yInverted": false,
-            "xInverted": false,
-            "aspectLocked": false,
-            "autoRange": [
-              true,
-              true
-            ],
-            "autoPan": [
-              false,
-              false
-            ],
-            "autoVisibleOnly": [
-              false,
-              false
-            ],
-            "linkedViews": [
-              null,
-              null
-            ],
-            "defaultPadding": 0.02,
-            "mouseEnabled": [
-              true,
-              true
-            ],
-            "mouseMode": 3,
-            "enableMenu": false,
-            "wheelScaleFactor": -0.125,
-            "background": null,
-            "logMode": [
-              false,
-              false
-            ],
-            "limits": {
-              "xLimits": [
-                -62135596800.0,
-                253370764800.0
-              ],
-              "yLimits": [
-                -1e+307,
-                1e+307
-              ],
-              "xRange": [
-                null,
-                null
-              ],
-              "yRange": [
-                null,
-                null
-              ]
-            }
-          }
-        },
-        "geometry": "01d9d0cb0003000000000b53000001bd00000e72000004dc00000b53000001bd00000e72000004dc0000000000000000100000000b53000001bd00000e72000004dc"
-      }
-    },
-    {
-      "class": "Filter",
-      "name": "Filter.0",
-      "state": {
-        "pos": [
-          600.0,
-          400.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "In": {
-            "io": "in",
-            "removable": false,
-            "ttype": "typing.Any",
-            "optional": false,
-            "group": null
-          },
-          "Out": {
-            "io": "out",
-            "removable": false,
-            "ttype": "typing.Any",
-            "optional": false,
-            "group": null
-          }
-        },
-        "widget": {
-          "conditions": 1,
-          "inputs": {
-            "In": "centroid.0.com_j"
-          },
-          "outputs": [
-            "Filter.0.Out"
-          ],
-          "Condition 0": {
-            "condition": "centroid.0.com_j[0]<60",
-            "Filter.0.Out": "centroid.0.com_j"
-          }
-        },
-        "geometry": "01d9d0cb0003000000000969000000a800000c88000003c700000969000000a800000c88000003c70000000000000000100000000969000000a800000c88000003c7"
-      }
-    },
-    {
-      "class": "ObjectViewer",
-      "name": "ObjectViewer.0",
-      "state": {
-        "pos": [
-          800.0,
-          400.0
-        ],
-        "enabled": true,
-        "viewed": false,
-        "terminals": {
-          "In": {
-            "io": "in",
-            "removable": false,
-            "ttype": "typing.Any",
-            "optional": false,
-            "group": null
-          }
-        },
-        "geometry": "01d9d0cb00030000000007a20000013700000ac100000456000007a20000013700000ac10000045600000000000000001000000007a20000013700000ac100000456"
       }
     },
     {
@@ -1051,7 +697,7 @@
           300.0
         ],
         "enabled": true,
-        "viewed": false,
+        "viewed": true,
         "terminals": {
           "img": {
             "io": "in",
@@ -1090,11 +736,11 @@
           }
         },
         "ctrl": {
-          "use_projection": false,
+          "use_projection": true,
           "bkg_n1": 10,
           "bkg_n2": 10
         },
-        "geometry": "01d9d0cb000300000000070c0000012300000a2b000004420000070c0000012300000a2b00000442000000000000000010000000070c0000012300000a2b00000442"
+        "geometry": "01d9d0cb000300000000040300000402000005360000048b0000040300000402000005360000048b000000000000000010000000040300000402000005360000048b"
       }
     },
     {
@@ -1116,6 +762,385 @@
             "group": null
           }
         }
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "evr0:raw:eventCodes",
+      "state": {
+        "pos": [
+          400.0,
+          600.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "list",
+            "optional": false,
+            "group": null
+          }
+        }
+      }
+    },
+    {
+      "class": "TimePlot",
+      "name": "TimePlot.0",
+      "state": {
+        "pos": [
+          600.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "X": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "Num Points": 200
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "centroid.0.com_i vs timestamp"
+          },
+          "legend": {
+            "trace.0": [
+              "Centroid.0.com_i vs timestamp",
+              "centroid.0.com_i vs timestamp",
+              {
+                "Point": {
+                  "symbol": "None",
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14
+                },
+                "Line": {
+                  "color": [
+                    255,
+                    0,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                1670883056.9840844,
+                1670883057.61039
+              ],
+              [
+                9.638615759512241,
+                78.42371795065287
+              ]
+            ],
+            "viewRange": [
+              [
+                1670883056.9840844,
+                1670883057.61039
+              ],
+              [
+                9.638615759512241,
+                78.42371795065287
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -62135596800.0,
+                253370764800.0
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb00030000000000080000033100000327000004c3000000080000033100000327000004c300000000000000001000000000080000033100000327000004c3"
+      }
+    },
+    {
+      "class": "TimePlot",
+      "name": "TimePlot.1",
+      "state": {
+        "pos": [
+          600.0,
+          200.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "X": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "Num Points": 200
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "centroid.0.com_j vs timestamp"
+          },
+          "legend": {
+            "trace.0": [
+              "Centroid.0.com_j vs timestamp",
+              "centroid.0.com_j vs timestamp",
+              {
+                "Point": {
+                  "symbol": "None",
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14
+                },
+                "Line": {
+                  "color": [
+                    255,
+                    0,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                1670883056.9727082,
+                1670883057.8717678
+              ],
+              [
+                3.019249987681336,
+                153.81308043483142
+              ]
+            ],
+            "viewRange": [
+              [
+                1670883056.9727082,
+                1670883057.8717678
+              ],
+              [
+                3.019249987681336,
+                153.81308043483142
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -62135596800.0,
+                253370764800.0
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb00030000000002e80000039400000607000004c4000002e80000039400000607000004c400000000000000001000000002e80000039400000607000004c4"
+      }
+    },
+    {
+      "class": "Filter",
+      "name": "Filter.0",
+      "state": {
+        "pos": [
+          600.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "conditions": 1,
+          "inputs": {
+            "In": "Centroid.0.com_j"
+          },
+          "outputs": [
+            "Filter.0.Out"
+          ],
+          "Condition 0": {
+            "condition": "Centroid.0.com_j > 55 and Centroid.0.com_j < 60",
+            "Filter.0.Out": "Centroid.0.com_j"
+          }
+        },
+        "geometry": "01d9d0cb00030000000001ed0000019e0000050c000004bd000001ed0000019e0000050c000004bd00000000000000001000000001ed0000019e0000050c000004bd"
+      }
+    },
+    {
+      "class": "ObjectViewer",
+      "name": "ObjectViewer.0",
+      "state": {
+        "pos": [
+          800.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "geometry": "01d9d0cb00030000000004090000030f000005d300000460000004090000030f000005d30000046000000000000000001000000004090000030f000005d300000460"
       }
     }
   ],
@@ -1145,18 +1170,6 @@
       "img"
     ],
     [
-      "Filter.0",
-      "Out",
-      "ObjectViewer.0",
-      "In"
-    ],
-    [
-      "Centroid.0",
-      "com_j",
-      "Filter.0",
-      "In"
-    ],
-    [
       "Centroid.0",
       "com_j",
       "TimePlot.1",
@@ -1169,6 +1182,12 @@
       "Y"
     ],
     [
+      "Centroid.0",
+      "com_j",
+      "Filter.0",
+      "In"
+    ],
+    [
       "timestamp",
       "Out",
       "TimePlot.0",
@@ -1179,6 +1198,12 @@
       "Out",
       "TimePlot.1",
       "X"
+    ],
+    [
+      "Filter.0",
+      "Out",
+      "ObjectViewer.0",
+      "In"
     ]
   ],
   "viewbox": {

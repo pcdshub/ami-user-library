@@ -37,7 +37,7 @@ def stats_from_moments(x, y=None):
     """
     if y is None:
         y = np.ones_like(x)
-    y = np.abs(y)  # negative values in the baseline screw things up
+    #y = np.abs(y)  # negative values in the baseline screw things up
     mean = np.sum(x*y) / np.sum(y)
     variance = np.sum((x-mean)**2*y) / y.sum()
     sigma = np.sqrt(variance)

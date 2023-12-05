@@ -9,12 +9,13 @@ do
    esac
 done
 
-source /sdf/group/lcls/ds/ana/sw/conda1/rel/ami_current/setup_env_lcls1.sh
+#source /sdf/group/lcls/ds/ana/sw/conda1/rel/ami_current/setup_env_lcls1.sh
+source ~/dev/ami/setup_env_lcls1.sh
 
 CMD="ami-local"
 
 if [ -v EXP ]; then
-    CMD="$CMD psana://exp=$EXP,run=$RUN,repeat=true,interval=1.0"
+    CMD="$CMD -b 10 -f interval=0.1 psana://exp=$EXP,run=$RUN,repeat=true"
 fi
 
 if [ -v FCFILE ]; then
