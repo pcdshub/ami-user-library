@@ -1,0 +1,26 @@
+#!/bin/bash
+
+while getopts "e:r:l:" var
+do
+   case "$var" in
+       e) EXP=${OPTARG};;
+       r) RUN=${OPTARG};;
+       l) FCFILE=${OPTARG};;
+   esac
+done
+
+#source /sdf/group/lcls/ds/ana/sw/conda1/rel/ami_current/setup_env_lcls1.sh
+source ~/dev/ami/setup_env_lcls1.sh
+
+CMD="ami-local"
+
+if [ -v EXP ]; then
+    CMD="$CMD -b 10 -f interval=0.1 psana://exp=$EXP,run=$RUN,repeat=true"
+fi
+
+if [ -v FCFILE ]; then
+    CMD="$CMD -l $FCFILE"
+fi
+
+echo $CMD
+$CMD
