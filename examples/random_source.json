@@ -1,0 +1,15 @@
+{
+    "interval": 0.01,
+    "init_time": 0.5,
+    "bound": 12,
+    "files": ["run22.h5"],
+    "repeat": true,
+    "config": {
+        "delta_t": {"dtype": "Scalar", "range": [0,10], "integer": true},
+        "cspad": {"dtype": "Image", "pedestal": 5, "width": 1, "shape": [1024, 1024]},
+        "laser": {"dtype": "Scalar", "range": [0,2], "integer": true},
+        "waveform": {"dtype": "Waveform", "pedestal": 5, "width": 1, "shape": [1024]},
+        "waveform2": {"dtype": "Waveform", "pedestal": 10, "width": 2, "shape": [1024]},
+        "area": {"dtype": "Image", "pedestal": 10, "width": 2, "shape": [256,1024]}
+    }
+}

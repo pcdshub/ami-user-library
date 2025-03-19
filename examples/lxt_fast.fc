@@ -1,0 +1,1347 @@
+{
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "XPP-USB-ENCODER-02:fex:values:0",
+      "state": {
+        "pos": [
+          200.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "geometry": "01d9d0cb0003000000000458000001cb000005c40000025200000458000001cb000005c4000002520000000000000000120000000458000001cb000005c400000252",
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "evr0:raw:eventCodes",
+      "state": {
+        "pos": [
+          200.0,
+          -100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "list",
+            "optional": false,
+            "group": null
+          }
+        },
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "jungfrau1M:raw:image",
+      "state": {
+        "pos": [
+          200.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Histogram": {
+              "Auto Range": true,
+              "Auto Levels": true,
+              "Log Scale": false
+            },
+            "Display": {
+              "Lock Aspect Ratio": true,
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            }
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "viewRange": [
+              [
+                -0.5,
+                0.5
+              ],
+              [
+                -0.5,
+                0.5
+              ]
+            ],
+            "yInverted": true,
+            "xInverted": false,
+            "aspectLocked": 1,
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.3333,
+                  [
+                    185,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  0.6666,
+                  [
+                    255,
+                    220,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              0,
+              1.0
+            ],
+            "mode": "mono"
+          }
+        },
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "XPP-SB2-BMMON:raw:TotalIntensity",
+      "state": {
+        "pos": [
+          200.0,
+          300.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "XPP:TIMETOOL:FLTPOS_PS",
+      "state": {
+        "pos": [
+          200.0,
+          0.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "Roi2D",
+      "name": "Roi2D.0",
+      "state": {
+        "pos": [
+          400.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          },
+          "Roi_Coordinates": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "origin x": 474,
+          "origin y": 367,
+          "extent x": 23,
+          "extent y": 16
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Histogram": {
+              "Auto Range": false,
+              "Auto Levels": false,
+              "Log Scale": false
+            },
+            "Display": {
+              "Lock Aspect Ratio": true,
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            }
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                372.41102808499335,
+                620.1973936628576
+              ],
+              [
+                254.62593305516003,
+                510.7705073349112
+              ]
+            ],
+            "viewRange": [
+              [
+                372.41102808499335,
+                620.1973936628576
+              ],
+              [
+                254.62593305516003,
+                510.7705073349112
+              ]
+            ],
+            "yInverted": true,
+            "xInverted": false,
+            "aspectLocked": 1,
+            "autoRange": [
+              false,
+              false
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    68,
+                    1,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    58,
+                    82,
+                    139,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    32,
+                    144,
+                    140,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    94,
+                    201,
+                    97,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    253,
+                    231,
+                    36,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              7.050331662771944,
+              45.48351122632251
+            ],
+            "mode": "mono"
+          }
+        },
+        "geometry": "01d9d0cb0003000000000a3d000000a500000fb6000004e100000a3d000000a500000fb6000004e10000000000000000120000000a3d000000a500000fb6000004e1"
+      }
+    },
+    {
+      "class": "Calculator",
+      "name": "Calculator.2",
+      "state": {
+        "pos": [
+          400.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "operation": "XPP-USB-ENCODER-02:fex:values:0+XPP:TIMETOOL:FLTPOS_PS"
+        },
+        "geometry": "01d9d0cb000300000000063c000000530000095b000003720000063c000000530000095b00000372000000000000000012000000063c000000530000095b00000372"
+      }
+    },
+    {
+      "class": "Filter",
+      "name": "Filter.0",
+      "state": {
+        "pos": [
+          600.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "Out.1": {
+            "io": "out",
+            "removable": true,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "conditions": 2,
+          "inputs": {
+            "In": "evr0:raw:eventCodes",
+            "In.1": "Calculator.2.Out"
+          },
+          "outputs": [
+            "Filter.0.Out",
+            "Filter.0.Out.1"
+          ],
+          "If": {
+            "condition": "90 in evr0:raw:eventCodes",
+            "Filter.0.Out": "Calculator.2.Out",
+            "Filter.0.Out.1": "None"
+          },
+          "Elif 1": {
+            "condition": "91 in evr0:raw:eventCodes",
+            "Filter.0.Out": "None",
+            "Filter.0.Out.1": "Calculator.2.Out"
+          }
+        },
+        "geometry": "01d9d0cb0003000000000cd60000013d00000ff50000045c00000cd60000013d00000ff50000045c0000000000000000120000000cd60000013d00000ff50000045c"
+      }
+    },
+    {
+      "class": "Sum",
+      "name": "Sum.0",
+      "state": {
+        "pos": [
+          600.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[amitypes.array.Array3d, amitypes.array.Array2d, amitypes.array.Array1d, list[float]]",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        }
+      }
+    },
+    {
+      "class": "MeanVsScan",
+      "name": "MeanVsScan.0",
+      "state": {
+        "pos": [
+          800.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Bin": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Value": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Bins": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Counts": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Value.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": "group.1"
+          },
+          "Counts.1": {
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": "group.1"
+          }
+        },
+        "ctrl": {
+          "binned": true,
+          "bins": 120,
+          "min": -10,
+          "max": 40
+        },
+        "geometry": "01d9d0cb00030000000006a4000000bb000009c3000003da000006a4000000bb000009c3000003da00000000000000001200000006a4000000bb000009c3000003da"
+      }
+    },
+    {
+      "class": "MeanVsScan",
+      "name": "MeanVsScan.1",
+      "state": {
+        "pos": [
+          800.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Bin": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Value": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Bins": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Counts": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Value.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": "group.1"
+          },
+          "Counts.1": {
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": "group.1"
+          }
+        },
+        "ctrl": {
+          "binned": true,
+          "bins": 120,
+          "min": -10,
+          "max": 40
+        },
+        "geometry": "01d9d0cb00030000000006d8000000ef000009f70000040e000006d8000000ef000009f70000040e00000000000000001200000006d8000000ef000009f70000040e"
+      }
+    },
+    {
+      "class": "ObjectViewer",
+      "name": "ObjectViewer.0",
+      "state": {
+        "pos": [
+          800.0,
+          600.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "geometry": "01d9d0cb00030000000004970000029c000005bd00000344000004970000029c000005bd0000034400000000000000001200000004970000029c000005bd00000344"
+      }
+    },
+    {
+      "class": "Calculator",
+      "name": "Calculator.0",
+      "state": {
+        "pos": [
+          1000.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "operation": "MeanVsScan.0.Counts/MeanVsScan.0.Counts.1"
+        },
+        "geometry": "01d9d0cb00030000000006be000000d5000009dd000003f4000006be000000d5000009dd000003f400000000000000001200000006be000000d5000009dd000003f4"
+      }
+    },
+    {
+      "class": "Calculator",
+      "name": "Calculator.1",
+      "state": {
+        "pos": [
+          1000.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "operation": "MeanVsScan.1.Counts/MeanVsScan.1.Counts.1"
+        },
+        "geometry": "01d9d0cb00030000000006f20000010900000a1100000428000006f20000010900000a110000042800000000000000001200000006f20000010900000a1100000428"
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.0",
+      "state": {
+        "pos": [
+          1200.0,
+          200.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "X": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "X.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": "group.1"
+          },
+          "Y.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": "group.1"
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "laser_on",
+            "trace.1": "laser_off"
+          },
+          "legend": {
+            "trace.0": [
+              "Calculator.0.Out vs MeanVsScan.0.Bins",
+              "laser_on",
+              {
+                "Point": {
+                  "symbol": "o",
+                  "Brush": [
+                    85,
+                    170,
+                    0,
+                    255
+                  ],
+                  "Size": 8
+                },
+                "Line": {
+                  "color": [
+                    85,
+                    170,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ],
+            "trace.1": [
+              "Calculator.1.Out vs MeanVsScan.1.Bins",
+              "laser_off",
+              {
+                "Point": {
+                  "symbol": "o",
+                  "Brush": [
+                    0,
+                    170,
+                    255,
+                    255
+                  ],
+                  "Size": 8
+                },
+                "Line": {
+                  "color": [
+                    0,
+                    170,
+                    255,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -11.36574736846594,
+                41.36574736846594
+              ],
+              [
+                0.03927184004808786,
+                0.11515104478524327
+              ]
+            ],
+            "viewRange": [
+              [
+                -11.36574736846594,
+                41.36574736846594
+              ],
+              [
+                0.03927184004808786,
+                0.11515104478524327
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb0003000000000010000001b4000005c90000046f00000010000001b4000005c90000046f0000000000000000120000000010000001b4000005c90000046f"
+      }
+    },
+    {
+      "class": "Calculator",
+      "name": "Calculator.3",
+      "state": {
+        "pos": [
+          1200.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Union[float, amitypes.array.Array1d, amitypes.array.Array2d, amitypes.array.Array3d]",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "operation": "(Calculator.0.Out-Calculator.1.Out)/Calculator.1.Out"
+        },
+        "geometry": "01d9d0cb00030000000006be000000d5000009dd000003f4000006be000000d5000009dd000003f400000000000000001200000006be000000d5000009dd000003f4"
+      }
+    },
+    {
+      "class": "LinePlot",
+      "name": "LinePlot.1",
+      "state": {
+        "pos": [
+          1400.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "X": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Calculator.3.Out vs MeanVsScan.0.Bins"
+          },
+          "legend": {
+            "trace.0": [
+              "Calculator.3.Out vs MeanVsScan.0.Bins",
+              "Calculator.3.Out vs MeanVsScan.0.Bins",
+              {
+                "Point": {
+                  "symbol": "o",
+                  "Brush": [
+                    170,
+                    170,
+                    0,
+                    255
+                  ],
+                  "Size": 8
+                },
+                "Line": {
+                  "color": [
+                    0,
+                    170,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -11.59392900062027,
+                41.59392900062027
+              ],
+              [
+                -0.40055837805553995,
+                0.6562145746367875
+              ]
+            ],
+            "viewRange": [
+              [
+                -11.59392900062027,
+                41.59392900062027
+              ],
+              [
+                -0.40055837805553995,
+                0.6562145746367875
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb00030000000006d8000000ef00000b220000044d000006d8000000ef00000b220000044d00000000000000001200000006d8000000ef00000b220000044d"
+      }
+    }
+  ],
+  "connects": [
+    [
+      "XPP-USB-ENCODER-02:fex:values:0",
+      "Out",
+      "Calculator.2",
+      "In.1"
+    ],
+    [
+      "evr0:raw:eventCodes",
+      "Out",
+      "Filter.0",
+      "In"
+    ],
+    [
+      "jungfrau1M:raw:image",
+      "Out",
+      "Roi2D.0",
+      "In"
+    ],
+    [
+      "XPP-SB2-BMMON:raw:TotalIntensity",
+      "Out",
+      "MeanVsScan.0",
+      "Value.1"
+    ],
+    [
+      "XPP-SB2-BMMON:raw:TotalIntensity",
+      "Out",
+      "MeanVsScan.1",
+      "Value.1"
+    ],
+    [
+      "XPP:TIMETOOL:FLTPOS_PS",
+      "Out",
+      "Calculator.2",
+      "In"
+    ],
+    [
+      "Roi2D.0",
+      "Out",
+      "Sum.0",
+      "In"
+    ],
+    [
+      "Calculator.2",
+      "Out",
+      "Filter.0",
+      "In.1"
+    ],
+    [
+      "Filter.0",
+      "Out",
+      "MeanVsScan.0",
+      "Bin"
+    ],
+    [
+      "Filter.0",
+      "Out.1",
+      "MeanVsScan.1",
+      "Bin"
+    ],
+    [
+      "Sum.0",
+      "Out",
+      "MeanVsScan.0",
+      "Value"
+    ],
+    [
+      "Sum.0",
+      "Out",
+      "MeanVsScan.1",
+      "Value"
+    ],
+    [
+      "Sum.0",
+      "Out",
+      "ObjectViewer.0",
+      "In"
+    ],
+    [
+      "MeanVsScan.0",
+      "Bins",
+      "LinePlot.0",
+      "X"
+    ],
+    [
+      "MeanVsScan.0",
+      "Counts",
+      "Calculator.0",
+      "In"
+    ],
+    [
+      "MeanVsScan.0",
+      "Counts.1",
+      "Calculator.0",
+      "In.1"
+    ],
+    [
+      "MeanVsScan.0",
+      "Bins",
+      "LinePlot.1",
+      "X"
+    ],
+    [
+      "MeanVsScan.1",
+      "Counts",
+      "Calculator.1",
+      "In"
+    ],
+    [
+      "MeanVsScan.1",
+      "Counts.1",
+      "Calculator.1",
+      "In.1"
+    ],
+    [
+      "MeanVsScan.1",
+      "Bins",
+      "LinePlot.0",
+      "X.1"
+    ],
+    [
+      "Calculator.0",
+      "Out",
+      "LinePlot.0",
+      "Y"
+    ],
+    [
+      "Calculator.0",
+      "Out",
+      "Calculator.3",
+      "In"
+    ],
+    [
+      "Calculator.1",
+      "Out",
+      "LinePlot.0",
+      "Y.1"
+    ],
+    [
+      "Calculator.1",
+      "Out",
+      "Calculator.3",
+      "In.1"
+    ],
+    [
+      "Calculator.3",
+      "Out",
+      "LinePlot.1",
+      "Y"
+    ]
+  ],
+  "viewbox": {
+    "comments": []
+  },
+  "source_configuration": {
+    "type": "hdf5",
+    "interval": 0.01,
+    "init_time": 0.5,
+    "hb_period": 10,
+    "files": [],
+    "repeat": true
+  },
+  "library": {
+    "paths": []
+  }
+}
