@@ -1,0 +1,563 @@
+{
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "laser",
+      "state": {
+        "pos": [
+          200.0,
+          0.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "int",
+            "optional": false,
+            "group": null
+          }
+        },
+        "geometry": "01d9d0cb00030000000007740000018b00000a93000004aa000007740000018b00000a93000004aa00000000000000001200000007740000018b00000a93000004aa",
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "SourceNode",
+      "name": "delta_t",
+      "state": {
+        "pos": [
+          200.0,
+          200.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "int",
+            "optional": false,
+            "group": null
+          }
+        },
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "Filter",
+      "name": "Filter.0",
+      "state": {
+        "pos": [
+          400.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "In.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          },
+          "Out.1": {
+            "io": "out",
+            "removable": true,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "conditions": 2,
+          "inputs": {
+            "In": "laser",
+            "In.1": "delta_t"
+          },
+          "outputs": [
+            "Filter.0.Out",
+            "Filter.0.Out.1"
+          ],
+          "If": {
+            "condition": "laser == 0",
+            "Filter.0.Out": "delta_t",
+            "Filter.0.Out.1": "None"
+          },
+          "Elif 1": {
+            "condition": "laser == 1",
+            "Filter.0.Out": "None",
+            "Filter.0.Out.1": "delta_t"
+          }
+        },
+        "geometry": "01d9d0cb00030000000009190000029000000c38000005af000009190000029000000c38000005af00000000000000001200000009190000029000000c38000005af"
+      }
+    },
+    {
+      "class": "ScalarPlot",
+      "name": "ScalarPlot.0",
+      "state": {
+        "pos": [
+          600.0,
+          0.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "Num Points": 1000
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Filter.0.Out"
+          },
+          "legend": {
+            "trace.0": [
+              "Filter.0.Out",
+              "Filter.0.Out",
+              {
+                "Point": {
+                  "symbol": "None",
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14
+                },
+                "Line": {
+                  "color": [
+                    255,
+                    0,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -28.177293136309032,
+                1027.177293136309
+              ],
+              [
+                -0.45188907119165067,
+                9.451889071191651
+              ]
+            ],
+            "viewRange": [
+              [
+                -28.177293136309032,
+                1027.177293136309
+              ],
+              [
+                -0.45188907119165067,
+                9.451889071191651
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb0003000000000ab90000044e000010d10000064700000ab90000044e000010d1000006470000000000000000120000000ab90000044e000010d100000647"
+      }
+    },
+    {
+      "class": "ScalarPlot",
+      "name": "ScalarPlot.1",
+      "state": {
+        "pos": [
+          600.0,
+          200.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "Num Points": 1000
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "trace.0": "Filter.0.Out.1"
+          },
+          "legend": {
+            "trace.0": [
+              "Filter.0.Out.1",
+              "Filter.0.Out.1",
+              {
+                "Point": {
+                  "symbol": "o",
+                  "Brush": [
+                    0,
+                    0,
+                    255,
+                    255
+                  ],
+                  "Size": 14
+                },
+                "Line": {
+                  "color": [
+                    255,
+                    0,
+                    0,
+                    255
+                  ],
+                  "width": 1,
+                  "style": "Solid"
+                }
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -28.67351755615936,
+                1027.6735175561594
+              ],
+              [
+                -0.42253270688779737,
+                9.422532706887798
+              ]
+            ],
+            "viewRange": [
+              [
+                -28.67351755615936,
+                1027.6735175561594
+              ],
+              [
+                -0.42253270688779737,
+                9.422532706887798
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb0003000000000731000003c600000d1d000005fa00000731000003c600000d1d000005fa0000000000000000120000000731000003c600000d1d000005fa"
+      }
+    },
+    {
+      "class": "ScalarPlot",
+      "name": "ScalarPlot.2",
+      "state": {
+        "pos": [
+          600.0,
+          100.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Y": {
+            "io": "in",
+            "removable": false,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          },
+          "Y.1": {
+            "io": "in",
+            "removable": true,
+            "ttype": "float",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "Num Points": 100
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            }
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "viewRange": [
+              [
+                0,
+                1
+              ],
+              [
+                0,
+                1
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              true,
+              true
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb0003000000000d52000000c700001071000003e600000d52000000c700001071000003e60000000000000000120000000d52000000c700001071000003e6"
+      }
+    }
+  ],
+  "connects": [
+    [
+      "laser",
+      "Out",
+      "Filter.0",
+      "In"
+    ],
+    [
+      "delta_t",
+      "Out",
+      "Filter.0",
+      "In.1"
+    ],
+    [
+      "Filter.0",
+      "Out",
+      "ScalarPlot.0",
+      "Y"
+    ],
+    [
+      "Filter.0",
+      "Out.1",
+      "ScalarPlot.1",
+      "Y"
+    ],
+    [
+      "Filter.0",
+      "Out",
+      "ScalarPlot.2",
+      "Y"
+    ],
+    [
+      "Filter.0",
+      "Out.1",
+      "ScalarPlot.2",
+      "Y.1"
+    ]
+  ],
+  "viewbox": {
+    "comments": []
+  },
+  "source_configuration": {
+    "type": "hdf5",
+    "interval": 0.01,
+    "init_time": 0.5,
+    "hb_period": 10,
+    "files": [],
+    "repeat": true
+  },
+  "library": {
+    "paths": []
+  }
+}

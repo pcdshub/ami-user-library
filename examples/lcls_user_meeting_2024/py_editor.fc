@@ -1,0 +1,641 @@
+{
+  "nodes": [
+    {
+      "class": "SourceNode",
+      "name": "epix_alc1:raw:image",
+      "state": {
+        "pos": [
+          200.0,
+          300.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Histogram": {
+              "Auto Range": false,
+              "Auto Levels": false,
+              "Log Scale": false
+            },
+            "Display": {
+              "Lock Aspect Ratio": true,
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            }
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -31.222767679634437,
+                804.2227676796344
+              ],
+              [
+                -26.44123828526974,
+                735.4412382852697
+              ]
+            ],
+            "viewRange": [
+              [
+                -31.222767679634437,
+                804.2227676796344
+              ],
+              [
+                -26.44123828526974,
+                735.4412382852697
+              ]
+            ],
+            "yInverted": true,
+            "xInverted": false,
+            "aspectLocked": 1,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.3333,
+                  [
+                    185,
+                    0,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  0.6666,
+                  [
+                    255,
+                    220,
+                    0,
+                    255
+                  ]
+                ],
+                [
+                  1,
+                  [
+                    255,
+                    255,
+                    255,
+                    255
+                  ]
+                ],
+                [
+                  0,
+                  [
+                    0,
+                    0,
+                    0,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              8.948908768931744,
+              112.45668214925573
+            ],
+            "mode": "mono"
+          }
+        },
+        "geometry": "01d9d0cb00030000000000080000001f000003270000033e000000080000001f000003270000033e00000000000000001200000000080000001f000003270000033e",
+        "source_kwargs": {}
+      }
+    },
+    {
+      "class": "Average2D",
+      "name": "Average2D.0",
+      "state": {
+        "pos": [
+          400.0,
+          300.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "N": 60,
+          "infinite": false
+        },
+        "geometry": "01d9d0cb00030000000006d8000000ef000009f70000040e000006d8000000ef000009f70000040e00000000000000001200000006d8000000ef000009f70000040e"
+      }
+    },
+    {
+      "class": "PythonEditor",
+      "name": "PythonEditor.0",
+      "state": {
+        "pos": [
+          400.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Bins": {
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "In": {
+            "io": "in",
+            "removable": true,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          },
+          "Counts": {
+            "io": "out",
+            "removable": true,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "text": "import numpy as np\n\n\nclass EventProcessor():\n\n    def __init__(self):\n        pass\n\n    def begin_run(self):\n        pass\n\n    def end_run(self):\n        pass\n\n    def begin_step(self, step):\n        pass\n\n    def end_step(self, step):\n        pass\n\n    def on_event(self, im_in, *args, **kwargs):\n        bins = np.linspace(-20, 450, 150)\n        im_flat = np.ravel(im_in)\n        hist, edges = np.histogram(im_flat, bins=bins)\n        return bins, hist"
+        },
+        "geometry": "01d9d0cb0003000000000bd10000012b00000ef00000044a00000bd10000012b00000ef00000044a0000000000000000120000000bd10000012b00000ef00000044a"
+      }
+    },
+    {
+      "class": "ImageViewer",
+      "name": "ImageViewer.0",
+      "state": {
+        "pos": [
+          600.0,
+          300.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array2d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Histogram": {
+              "Auto Range": false,
+              "Auto Levels": false,
+              "Log Scale": false
+            },
+            "Display": {
+              "Lock Aspect Ratio": true,
+              "Flip": false,
+              "Rotate Counter Clockwise": "0"
+            }
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -31.222767679634437,
+                804.2227676796344
+              ],
+              [
+                -26.44123828526974,
+                735.4412382852697
+              ]
+            ],
+            "viewRange": [
+              [
+                -31.222767679634437,
+                804.2227676796344
+              ],
+              [
+                -26.44123828526974,
+                735.4412382852697
+              ]
+            ],
+            "yInverted": true,
+            "xInverted": false,
+            "aspectLocked": 1,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              false
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          },
+          "histogramLUT": {
+            "gradient": {
+              "mode": "rgb",
+              "ticks": [
+                [
+                  0.0,
+                  [
+                    68,
+                    1,
+                    84,
+                    255
+                  ]
+                ],
+                [
+                  0.25,
+                  [
+                    58,
+                    82,
+                    139,
+                    255
+                  ]
+                ],
+                [
+                  0.5,
+                  [
+                    32,
+                    144,
+                    140,
+                    255
+                  ]
+                ],
+                [
+                  0.75,
+                  [
+                    94,
+                    201,
+                    97,
+                    255
+                  ]
+                ],
+                [
+                  1.0,
+                  [
+                    253,
+                    231,
+                    36,
+                    255
+                  ]
+                ]
+              ],
+              "ticksVisible": true
+            },
+            "levels": [
+              6.906878407741321,
+              68.14494784644921
+            ],
+            "mode": "mono"
+          }
+        },
+        "geometry": "01d9d0cb0003000000000cd2000000ce00000ff1000003ed00000cd2000000ce00000ff1000003ed0000000000000000120000000cd2000000ce00000ff1000003ed"
+      }
+    },
+    {
+      "class": "SumN",
+      "name": "SumN.0",
+      "state": {
+        "pos": [
+          600.0,
+          600.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Count": {
+            "io": "out",
+            "removable": false,
+            "ttype": "int",
+            "optional": false,
+            "group": null
+          },
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "ctrl": {
+          "N": 60
+        },
+        "geometry": "01d9d0cb0003000000000d3b000000ea0000105a0000040900000d3b000000ea0000105a000004090000000000000000120000000d3b000000ea0000105a00000409"
+      }
+    },
+    {
+      "class": "Histogram",
+      "name": "Histogram.0",
+      "state": {
+        "pos": [
+          800.0,
+          500.0
+        ],
+        "enabled": true,
+        "viewed": false,
+        "terminals": {
+          "Bins": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          },
+          "Counts": {
+            "io": "in",
+            "removable": false,
+            "ttype": "amitypes.array.Array1d",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "ctrl": {
+            "Title": "",
+            "Show Grid": true,
+            "X Axis": {
+              "Label": "",
+              "Log Scale": false
+            },
+            "Y Axis": {
+              "Label": "",
+              "Log Scale": true
+            },
+            "trace.0": "SumN.0.Out"
+          },
+          "legend": {
+            "trace.0": [
+              "SumN.0.Out",
+              "SumN.0.Out",
+              {
+                "brush": [
+                  170,
+                  170,
+                  255,
+                  255
+                ]
+              }
+            ]
+          },
+          "viewbox": {
+            "targetRange": [
+              [
+                -37.73508970969185,
+                467.73508970969186
+              ],
+              [
+                -0.2849721035209218,
+                7.42831752907054
+              ]
+            ],
+            "viewRange": [
+              [
+                -37.73508970969185,
+                467.73508970969186
+              ],
+              [
+                -0.2849721035209218,
+                7.42831752907054
+              ]
+            ],
+            "yInverted": false,
+            "xInverted": false,
+            "aspectLocked": false,
+            "autoRange": [
+              1.0,
+              1.0
+            ],
+            "autoPan": [
+              false,
+              false
+            ],
+            "autoVisibleOnly": [
+              false,
+              false
+            ],
+            "linkedViews": [
+              null,
+              null
+            ],
+            "defaultPadding": 0.02,
+            "mouseEnabled": [
+              true,
+              true
+            ],
+            "mouseMode": 3,
+            "enableMenu": false,
+            "wheelScaleFactor": -0.125,
+            "background": null,
+            "logMode": [
+              false,
+              true
+            ],
+            "limits": {
+              "xLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "yLimits": [
+                -1e+307,
+                1e+307
+              ],
+              "xRange": [
+                null,
+                null
+              ],
+              "yRange": [
+                null,
+                null
+              ]
+            }
+          }
+        },
+        "geometry": "01d9d0cb0003000000000be50000021800000f150000050200000be50000021800000f15000005020000000000000000120000000be50000021800000f1500000502"
+      }
+    }
+  ],
+  "connects": [
+    [
+      "epix_alc1:raw:image",
+      "Out",
+      "Average2D.0",
+      "In"
+    ],
+    [
+      "epix_alc1:raw:image",
+      "Out",
+      "PythonEditor.0",
+      "In"
+    ],
+    [
+      "Average2D.0",
+      "Out",
+      "ImageViewer.0",
+      "In"
+    ],
+    [
+      "PythonEditor.0",
+      "Counts",
+      "SumN.0",
+      "In"
+    ],
+    [
+      "PythonEditor.0",
+      "Bins",
+      "Histogram.0",
+      "Bins"
+    ],
+    [
+      "SumN.0",
+      "Out",
+      "Histogram.0",
+      "Counts"
+    ]
+  ],
+  "viewbox": {
+    "comments": []
+  },
+  "source_configuration": {
+    "type": "hdf5",
+    "interval": 0.01,
+    "init_time": 0.5,
+    "hb_period": 10,
+    "files": [],
+    "repeat": true
+  },
+  "library": {
+    "paths": []
+  }
+}
