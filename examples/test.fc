@@ -1,0 +1,76 @@
+{
+  "nodes": [
+    {
+      "class": "Constant",
+      "name": "Constant.0",
+      "state": {
+        "pos": [
+          300.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "Out": {
+            "io": "out",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "widget": {
+          "args": {
+            "float": 10.0
+          },
+          "function": "float"
+        },
+        "geometry": "01d9d0cb00030000000007c70000034300000ae600000662000007c70000034300000ae60000066200000000000000001200000007c70000034300000ae600000662"
+      }
+    },
+    {
+      "class": "ObjectViewer",
+      "name": "ObjectViewer.0",
+      "state": {
+        "pos": [
+          500.0,
+          400.0
+        ],
+        "enabled": true,
+        "viewed": true,
+        "terminals": {
+          "In": {
+            "io": "in",
+            "removable": false,
+            "ttype": "typing.Any",
+            "optional": false,
+            "group": null
+          }
+        },
+        "geometry": "01d9d0cb0003000000000a45000000c100000d64000003e000000a45000000c100000d64000003e00000000000000000120000000a45000000c100000d64000003e0"
+      }
+    }
+  ],
+  "connects": [
+    [
+      "Constant.0",
+      "Out",
+      "ObjectViewer.0",
+      "In"
+    ]
+  ],
+  "viewbox": {
+    "comments": []
+  },
+  "source_configuration": {
+    "type": "hdf5",
+    "interval": 0.01,
+    "init_time": 0.5,
+    "hb_period": 10,
+    "files": [],
+    "repeat": true
+  },
+  "library": {
+    "paths": []
+  }
+}
