@@ -1,6 +1,7 @@
 #!/bin/bash
 
 source /sdf/group/lcls/ds/ana/sw/conda2/manage/bin/psconda.sh
+#source ~/dev/lcls2/setup_env.sh
 
 EXP="ued1010667"
 RUN="5"
